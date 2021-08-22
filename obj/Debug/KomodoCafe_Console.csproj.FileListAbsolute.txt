@@ -1,0 +1,10 @@
+C:\Users\bryso\source\repos\GoldBadgeChallenges\obj\Debug\KomodoCafe_Console.csproj.AssemblyReference.cache
+C:\Users\bryso\source\repos\GoldBadgeChallenges\obj\Debug\KomodoCafe_Console.csproj.CoreCompileInputs.cache
+C:\Users\bryso\source\repos\GoldBadgeChallenges\bin\Debug\GoldBadgeChallenges.exe.config
+C:\Users\bryso\source\repos\GoldBadgeChallenges\bin\Debug\GoldBadgeChallenges.exe
+C:\Users\bryso\source\repos\GoldBadgeChallenges\bin\Debug\GoldBadgeChallenges.pdb
+C:\Users\bryso\source\repos\GoldBadgeChallenges\bin\Debug\KomodoCafe_Repository.dll
+C:\Users\bryso\source\repos\GoldBadgeChallenges\bin\Debug\KomodoCafe_Repository.pdb
+C:\Users\bryso\source\repos\GoldBadgeChallenges\obj\Debug\KomodoCafe_Console.csproj.CopyComplete
+C:\Users\bryso\source\repos\GoldBadgeChallenges\obj\Debug\GoldBadgeChallenges.exe
+C:\Users\bryso\source\repos\GoldBadgeChallenges\obj\Debug\GoldBadgeChallenges.pdb
