@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace KomodoCafe_Console
@@ -42,13 +43,10 @@ namespace KomodoCafe_Console
             {
                 Console.Clear();
 
-                // \n = new line = CR + LF
-                // CR = Carriage Return
-                // LF = Line Feed
                 Console.WriteLine("Menu:\n" +
-                    "1. Show all streaming content\n" +
-                    "2. Find streaming content by title\n" +
-                    "3. Add new streaming content\n" +
+                    "1. Show all menu items\n" +
+                    "2. Delete item by name\n" +
+                    "3. Add new menu item\n" +
                     "4. Remove streaming content\n" +
                     "5. Exit");
 
@@ -57,20 +55,21 @@ namespace KomodoCafe_Console
                 switch (userInput)
                 {
                     case "1":
-                        // Show all content
-                        DisplayAllContents();
+                        //display menus
+                        menuRepository.ShowMenus();
                         break;
                     case "2":
-                        // Find by title
-                        GetContentByTitle();
+                        Console.WriteLine("\nEnter item name to delete:");
+                        string delete = Console.ReadLine();
+                        menuRepository.DeleteMenuItem(delete);
                         break;
                     case "3":
-                        // Add new content
-                        AddNewContent();
+                        Menu menu = CreateMenu();
+                        menuRepository.AddItemToMenu(menu);
                         break;
                     case "4":
                         // Remove content
-                        RemoveContent();
+                        //RemoveContent();
                         break;
                     case "exit":
                     case "EXIT":
@@ -94,6 +93,28 @@ namespace KomodoCafe_Console
             // returns a string:
             // Console.ReadLine();
         }
-    }
+        
+        public Menu CreateMenu()
+        {
+            Console.WriteLine("\nEnter a meal number:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nEnter name for meal:");
+            string name = Console.ReadLine();
+            Console.WriteLine("\nEnter meal description:");
+            string desc = Console.ReadLine();
+            Console.WriteLine("\nEnter list of ingredients seperated by','");
+            string ing = Console.ReadLine();
+            string[] ingredients = ing.Split(',');
+            List<string> thisIsAPain = new List<string>();
+            foreach (string item in ingredients)
+            {
+                thisIsAPain.Add(item);
+            }
+            Console.WriteLine("\nEnter the price of the item:");
+            double price = Convert.ToDouble(Console.ReadLine());
+
+            Menu menu = new Menu(num, name, desc, thisIsAPain, price);
+            return menu;
+        }
     }
 }
